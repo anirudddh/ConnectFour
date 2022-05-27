@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Connect Four by Aniruddh</title>
+        <link rel="stylesheet" href="iziToast.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="iziToast.min.js"></script>
+        <script src="game.js"></script>
+        <link rel="stylesheet" href="game.css" type="text/css">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        
+    </head>
+
+    <body>
+        <div id="instructions">
+            <div id="instTitle"><u>Instructions</u></div>
+            <div id="instructionBulletPoints">
+                <div id="obj1">
+                    <span><b>T</b></span>wo
+                    players take turns to drop the coin of their color
+                    from the top of the grid by clicking on the respective columns.
+                </div>
+                <div id="obj2">
+                    <span><b>T</b></span>he
+                    first player with four coins in a row
+                    (horizontally, diagonally, or vertically)
+                    is the winner of the game!
+                </div>
+            </div>
+            <input type="button" id="close" value="Got it">
+        </div>  
+        <div id="container">
+            
+            <div class="titlecf">
+                <p id="f">Connect</p>
+            </div>
+
+            <div class="titlecf">
+                <p id="s">four</p>
+            </div>
+
+            <div class="titlecf" id="instrdiv">
+                <p id = "instr"><u>Instructions</u></p>
+            </div>
+            
+            
+            
+            <div id="board">
+                <div class="coin_shadow_container" id="ta" onmouseover = "showShadow(0)" onmouseout="hideShadow(0)" onclick="dropCoin(0)">
+                        <div class="coin_shadow" id="ya" style="display: none;"></div>
+                        <div class="coin_shadow" id="ra" style="display: none;"></div>
+                </div>
+                <div class="coin_shadow_container" id="tb" onmouseover = "showShadow(1)" onmouseout="hideShadow(1)" onclick="dropCoin(1)">
+                    <div class="coin_shadow" id="yb" style="display: none;"></div>
+                    <div class="coin_shadow" id="rb" style="display: none;"></div>
+                </div>
+                <div class="coin_shadow_container" id="tc" onmouseover = "showShadow(2)" onmouseout="hideShadow(2)" onclick="dropCoin(2)">
+                    <div class="coin_shadow" id="yc" style="display: none;"></div>
+                    <div class="coin_shadow" id="rc" style="display: none;"></div>
+                </div>
+                <div class="coin_shadow_container" id="td" onmouseover = "showShadow(3)" onmouseout="hideShadow(3)" onclick="dropCoin(3)">
+                    <div class="coin_shadow" id="yd" style="display: none;"></div>
+                    <div class="coin_shadow" id="rd" style="display: none;"></div>
+                </div>
+                <div class="coin_shadow_container" id="te" onmouseover = "showShadow(4)" onmouseout="hideShadow(4)" onclick="dropCoin(4)">
+                    <div class="coin_shadow" id="ye" style="display: none;"></div>
+                    <div class="coin_shadow" id="re" style="display: none;"></div>
+                </div>
+                <div class="coin_shadow_container" id="tf" onmouseover = "showShadow(5)" onmouseout="hideShadow(5)" onclick="dropCoin(5)">
+                    <div class="coin_shadow" id="yf" style="display: none;"></div>
+                    <div class="coin_shadow" id="rf" style="display: none;"></div>
+                </div>
+                <div class="coin_shadow_container" id="tg" onmouseover = "showShadow(6)" onmouseout="hideShadow(6)" onclick="dropCoin(6)">
+                    <div class="coin_shadow" id="yg" style="display: none;"></div>
+                    <div class="coin_shadow" id="rg" style="display: none;"></div>
+                </div>
+
+                <div class="bg" id="aa"></div>
+                <div class="bg" id="ab"></div>
+                <div class="bg" id="ac"></div>
+                <div class="bg" id="ad"></div>
+                <div class="bg" id="ae"></div>
+                <div class="bg" id="af"></div>
+                <div class="bg" id="ag"></div>
+
+
+                <div class="bg" id="ba"></div>
+                <div class="bg" id="bb"></div>
+                <div class="bg" id="bc"></div>
+                <div class="bg" id="bd"></div>
+                <div class="bg" id="be"></div>
+                <div class="bg" id="bf"></div>
+                <div class="bg" id="bg"></div>
+
+
+                <div class="bg" id="ca"></div>
+                <div class="bg" id="cb"></div>
+                <div class="bg" id="cc"></div>
+                <div class="bg" id="cd"></div>
+                <div class="bg" id="ce"></div>
+                <div class="bg" id="cf"></div>
+                <div class="bg" id="cg"></div>
+
+
+                <div class="bg" id="da"></div>
+                <div class="bg" id="db"></div>
+                <div class="bg" id="dc"></div>
+                <div class="bg" id="dd"></div>
+                <div class="bg" id="de"></div>
+                <div class="bg" id="df"></div>
+                <div class="bg" id="dg"></div>
+
+                <div class="bg" id="ea"></div>
+                <div class="bg" id="eb"></div>
+                <div class="bg" id="ec"></div>
+                <div class="bg" id="ed"></div>
+                <div class="bg" id="ee"></div>
+                <div class="bg" id="ef"></div>
+                <div class="bg" id="eg"></div>
+                
+
+                <div class="bg" id="fa"></div>
+                <div class="bg" id="fb"></div>
+                <div class="bg" id="fc"></div>
+                <div class="bg" id="fd"></div>
+                <div class="bg" id="fe"></div>
+                <div class="bg" id="ff"></div>
+                <div class="bg" id="fg"></div>
+
+            </div>
+
+            <div id = "hearts"> Made with &hearts; by Aniruddh</div>
+        </div>
+        
+         <center><footer class="w3-container w3-padding-16 w3-light-grey">
+    
+    
+    <div class="footer">
+        <p>Copyright &copy; 2022 All Rights Reserved | Game made by <a href="https://linktr.ee/Anirudddh" >Aniruddha Rajendra Shinde</a>  </p>
+        
+    </div>
+  </footer></center>
+    </body>
+</html>

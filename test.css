@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');  
+/* font-family: 'Monoton', cursive; */
+
+#title{
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+    font-family: 'Monoton' , cursive;
+    font-size: 50px;
+    color: red;
+}
